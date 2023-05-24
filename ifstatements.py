@@ -34,12 +34,14 @@
 
 '''리스트 값 수정'''
 # lista = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+# print(lista)
 # lista[2] = 'h'
 # print(lista)
 # listb = [1,1,2,3,4,5,1,1]
-# listb[3] = [0,0,0]
-'''갯수 확인'''
+# print(listb)
+'''개수 확인'''
 # print(lista.count('a'))
+# listb[3] = [0,0,0]
 # print(listb)
 # print(listb.count([0,0,0]))
 '''요소삭제(del, remove)'''
