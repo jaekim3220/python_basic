@@ -57,7 +57,7 @@ s2 = set([4,5,6,7,8,-10,-5])
 #in, not in : in(또는 not in) 뒤에 iterable한 자료형이 나온다.
 #a in lista, a not in lista, a in dicta.keys()
 #비어있는 값들은 거짓, 값이 들어있으면 참
-listA = [1,2,3]
-while listA:
-    print("참이다")
-    listA.pop() #무한 방지
+# listA = [1,2,3]
+# while listA:
+#     print("참이다")
+#     listA.pop() #무한 방지
