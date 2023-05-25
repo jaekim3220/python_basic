@@ -162,4 +162,3 @@
 '''문자열뒤집기2'''
 # answer = ''.join(reversed(my_string))
 # print(answer)
-
