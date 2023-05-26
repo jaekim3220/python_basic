@@ -1,4 +1,4 @@
-'''dictionary'''
+'''dictionary(map)'''
 #다른 language의 map 또는 hashmap과 유사한 자료형
 #json이라는 자료 형태와 유사함
 
@@ -19,9 +19,9 @@
 '''예제'''
 # dic1 = {'이름' : '홍길동', '나이' : 25, '몸무게' : 60, '성별' : '남', '성별' : '여'}
 '''key:value 추가'''
+# print(dic1)
 # dic1['신분'] = '학생'
 # print(dic1)
-
 '''key:value 삭제'''
 # del dic1['성별']
 # print(dic1)
@@ -44,9 +44,11 @@
 # dic.pop('two')      # 값을 삭제합니다  {'three' : 3}
 # print(dic)
 
-'''key 목록만 뽑아낼 때'''
+'''keys/values 목록만 뽑아낼 때'''
 # keyList = dic1.keys()
 # print(keyList)
+# valList = dic1.values()
+# print(valList)
 
 '''keylist에서 각각의 값을 출력'''
 # for k in keyList:
@@ -122,16 +124,17 @@
 #         print(person)
 
 '''완주하지 못한 선수2'''
-participant = ["mislav", "stanko", "mislav", "ana"]
-completion = ["stanko", "ana", "mislav"]
-dictc = {}
-for c in completion:
-    if c not in dictc.keys():
-        dictc[c] = 1
-    else:
-        dictc[c] += 1
-for p in participant:
-    if p in dictc.keys() and dictc[p] > 0:
-        dictc[p] -= 1
-    else:
-        print(p)
+# participant = ["mislav", "stanko", "mislav", "ana"]
+# completion = ["stanko", "ana", "mislav"]
+# dictc = {}
+# for c in completion:
+#     if c not in dictc.keys():
+#         dictc[c] = 1
+#     else:
+#         dictc[c] += 1
+# for p in participant:
+#     if p in dictc.keys() and dictc[p] > 0:
+#         dictc[p] -= 1
+#     else:
+#         print(p)
+

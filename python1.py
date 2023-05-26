@@ -18,5 +18,8 @@ print(type(b))
 c = 2.1
 print(type(c))'''
 
-x = 'a'
-print(ord(x))
+'''x = 'a'
+print(ord(x))'''
+
+print(10 | 1)
+print(10 & 1)

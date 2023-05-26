@@ -1,22 +1,3 @@
-'''if문 기본 문법'''
-
-# #얼마를 가지고 있습니까
-# n = int(input("얼마가 있는가? "))
-# if n >= 30000:
-#     print("택시를 타시오")
-# else:
-#     print("도보")
-
-# # range 문법
-# for a in range(1,101):
-#     print(a)
-
-# listb = ['a', 'b', 'c', 'd']
-# for b in listb:
-#     print(b)
-# for b in range(0, len(listb)):
-#     print(b)
-
 '''list'''
 # lista = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 # print(lista[:5])
@@ -162,3 +143,40 @@
 '''문자열뒤집기2'''
 # answer = ''.join(reversed(my_string))
 # print(answer)
+
+'''list 복습'''
+'''최대값/최소값 구하기 1
+리스트의 최대값을 정렬함수, 최댓값함수 없이 for문을 통해 출력'''
+lista = [50, 10, 100, 40, 55, 90]
+# print(lista)
+# maxa = lista[0]
+# mina = lista[0]
+# for a in lista:
+#     if maxa < a:
+#         maxa = a
+#     if mina > a:
+#         mina = a
+# print("최대값은 {}입니다.".format(maxa))
+# print(f"최소값은 {mina}입니다.")
+'''최대값/최소값 구하기 2, min()/max()'''
+# mina = min(lista)
+# maxa = max(lista)
+'''최대값/최소값 구하기 3, sort'''
+# mina = sorted(lista)
+# print(mina)
+# print(mina[0])
+# maxa = sorted(lista, reverse=True)
+# print(maxa[0])
+# lista.sort()
+# print(lista)
+# print(lista[0])
+# lista.sort(reverse=True)
+# print(lista)
+# print(lista[0])
+'''4, len'''
+# lista.sort()
+# mina = lista[0]
+# print(mina)
+# maxa = lista[len(lista)-1]
+# maxa = lista[-1]
+# print(maxa)
