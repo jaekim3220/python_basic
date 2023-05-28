@@ -12,11 +12,12 @@
 #     a += 1 
 #     print(str(a)+"번 반복")
 
-'''1~1000까지 반복'''
+'''1~1000까지 반복 1'''
 # a = 0
 # while a <1000: 
 #     a += 1
 #     print(str(a)+"번 반복")
+'''1~1000까지 반복 2'''
 # a = 1
 # while a <1001: 
 #     print(str(a)+"번 반복")
@@ -28,18 +29,26 @@
 #     a += 1
 #     print(sum(a))
 
-'''1~1000까지 모두 더한 평균 값'''
-'''1번'''
+'''1~1000까지 모두 더한 평균 값 1'''
 # a = 0
 # sum = 0
 # while a < 1000:
 #     a += 1
 #     sum += a
 # print(sum)
-'''2번'''
-# a = 1
+'''a = 1000일 경우 break'''
+# a = 0
+# sum = 0
+# while a < 1000:
+#     a += 1
+#     sum += a
+#     if a == 1000:
+#         break
+# print(sum)
+'''1~1000까지 모두 더한 평균 값 2'''
+# a = 0
 # suma = 0
-# while a <= 1000:
+# while a < 1001:
 #     suma += a
 #     a += 1
 # print(suma)
@@ -47,12 +56,21 @@
 '''while문에서 break를 써서 반복문 종료'''
 '''if문을 사용한 xxx한 조건에 break'''
 
-'''suma > 1000일 경우 break'''
+'''suma > 1000일 경우 break 1'''
 # a = 1
 # suma = 0
-# while a <= 1000:
+# while a < 1000:
 #     suma += a
 #     a += 1
+#     if suma > 1000:
+#         break
+# print(suma)
+'''suma > 1000일 경우 break 2'''
+# a = 0
+# suma = 0
+# while a < 1000:
+#     a += 1
+#     suma += a
 #     if suma > 1000:
 #         break
 # print(suma)
@@ -67,6 +85,16 @@
 #     a += 1
 # print(suma)
 
+'''a == 500일 경우 break 2'''
+# a = 0
+# suma = 0
+# while a < 1000:
+#     a += 1
+#     suma += a
+#     if a == 500:
+#         break
+# print(suma)
+
 '''1~1000 중 홀수만 더하는 경우(break 아님)'''
 # a = 0
 # sum = 0
@@ -76,7 +104,7 @@
 #         sum += a
 # print(sum)
 
-'''continue 구문을 만나면 다시 반복문 조건으로 이동 - continue문은 거의 안씀'''
+'''continue 구문을 만나면 다시 반복문 조건으로 이동(잘못된 구문 피하기용)'''
 '''불필요한 로직을 수행하지 않고 다시 조건으로 이동'''
 # a = 0
 # while a < 1000:
@@ -89,23 +117,22 @@
 # while a < 1000:
 #     a += 1
 #     if a % 2 == 0:
-#         continue
+#         continue #짝수일 경우 현재의 반복을 중지, 다음 반복으로 이동
 #     sum += a
 # print(sum)
 
-'''continue로 조건물 간략화 가능'''
+'''continue로 if-else 조건물 간략화 가능'''
 # while True:
 #     angle = int(input("입력 각도 "))
 #     if (angle > 180)|(angle <= 0):
 #         print('잘못된 값')
 #         continue
-#     if 0 < angle <90:
+#     if 0 < angle < 90:
 #         print("예각")
 #     elif angle == 90:
 #         print('직각')
-#     elif 90< angle <180:
+#     elif 90 < angle < 180:
 #         print('둔각')
-
 ''''''
 # while True:
 #     inputa = int(input("입력 번호 "))
@@ -154,7 +181,6 @@ list의 크기는 10이하'''
 # print(new_list)
 # print("크기 {}의 {} 리스트 할당".format(list_size, new_list))
 
-
 '''정답1'''
 # while True:
 #     list_size = int(input("리스트 크기 : "))
@@ -164,10 +190,11 @@ list의 크기는 10이하'''
 #     a = 0
 #     lista = []
 #     while a < list_size:
-#         listValue = input('리스트 값 입력 :')
-#         lista.append(listValue)
+#         listValue = input('리스트 값 : ')
+#         lista.append(int(listValue))
 #         a+=1
-#     print(lista)
+#     print( lista)
+#     break
 '''정답2 if-else'''
 # while True:
 #     list_size = int(input("리스트 크기: "))
@@ -191,7 +218,7 @@ list의 크기는 10이하'''
 '''리스트 크기가 6개인 리스트를 while을 써 오늘의 로또번호 6개 생성'''
 # import random
 # while True:
-#     lotto_size = int(input("크기: "))
+#     lotto_size = int(input("크기 : "))
 #     if lotto_size != 6:
 #         print("다시 입력")
 #         continue
@@ -202,13 +229,21 @@ list의 크기는 10이하'''
 #             lista.append(random_num)
 #     print(lista)
 #     break
-
-'''답'''
-import random
-a = 0
-lista = []
-while a < 6:
-    randnum = random.randint(1,45)
-    lista.append(randnum)
-    a+=1
-print(lista)
+'''답(중복 숫자 도출 가능)'''
+# import random
+# a = 0
+# lista = []
+# while a < 6:
+#     randnum = random.randint(1,45)
+#     lista.append(randnum)
+#     a+=1
+# print(lista)
+'''답(중복 숫자 배제)'''
+# import random
+# a = 0
+# lista = []
+# while a < 6:
+#     randnum = random.randint(1,45)
+#     if randnum not in lista:
+#         lista.append(randnum)
+# print(lista)

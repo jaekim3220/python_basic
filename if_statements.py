@@ -37,7 +37,7 @@
 
 '''삼항연산자 2'''
 # a = 10
-# print('\'a\'는 10보다 크다') if a>10  else print("\'a\'는 10보다 작다")
+# print('\'a\'는 10보다 크다') if a>10 else print("\'a\'는 10보다 작다")
 
 # a = 10
 # result = '\'a\'는 10보다 크다' if a>10 else "\'a\'는 10보다 작다"
@@ -49,7 +49,7 @@
 # num = int(input("숫자 입력 : "))
 # print("입력한 숫자 존재") if num in lista else print("입력한 숫자가 없음")
 
-'''if 연습문제1'''
+'''if 연습문제 1'''
 # suitcase = int(input("짐의 무게 : "))
 # if suitcase >= 10:
 #     money = (suitcase//10)*10000
@@ -65,6 +65,6 @@
 # else '집에 가시오'
 # print(result)
 
-'''비교연산자 is'''
+'''비교연산자 is(==)'''
 # 숫자, 문자, bool의 경우 데이터 pool에서 만들어서 재활용
 # 그래서 값 비교 시 메모리 주소가 아니라 데이터 pool에서 값을 비교

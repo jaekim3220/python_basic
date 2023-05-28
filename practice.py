@@ -1,9 +1,41 @@
-'''369게임은 1부터 숫자를 하나씩 대며 3, 6, 9가 들어가는 숫자는 
-숫자 대신 3, 6, 9의 개수만큼 박수를 치는 게임입니다. 
-머쓱이가 말해야하는 숫자 order가 매개변수로 주어질 때, 
-머쓱이가 쳐야할 박수 횟수를 return 하도록 solution 함수를 완성해보세요.'''
-# answer = 0
-# order = input("말한 숫자 : ")
-# for speak in ['3', '6', '9']:
-#     answer += order.count(speak)
-# print(answer)
+'''while문 활용한 나만의 리스트 만들기'''
+'''리스트 크기를 입력 받아 그 크기만큼 임의 숫자를 리스트에 추가,
+리스트의 크기와 값 전체를 출력. 모든 값은 키보드로 입력, 
+list 크기는 함수를 통해 도출
+list의 크기는 10이하'''
+# while True:
+#     listsize = int(input("리스트 크기 : "))
+#     if listsize > 10 or listsize <= 0:
+#         print("잘못된 값 입력")
+#         continue
+#     a = 0
+#     lista = []
+#     while a < listsize:        
+#         listvalue = int(input("리스트 값 : "))
+#         lista.append(int(listvalue))
+#         a += 1
+#     print(lista)
+#     break
+    
+
+'''while문 사용한 원본 바꾸기 '''
+# lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# listnum = 0
+# while listnum < len(lista):
+#     lista[listnum] = pow(int(listnum)+1,2)
+#     listnum += 1
+# print(lista)
+
+'''dictionary_comprehension1'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# result = {"{}번".format(number): name for number, name in enumerate(students)}
+# print(result)
+'''comprehension1'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# scores = [90, 85, 95, 80]
+# result = {student: score for student, score in zip(students, scores)}
+# print(result)
+'''comprehension1'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# result = {students[i]: scores[i] for i in range(len(students))}
+# print(result)

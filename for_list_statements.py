@@ -1,12 +1,12 @@
-'''range 문법'''
+'''range 문법 1'''
 # for a in range(1,101):
 #     print(a)
 
-''''''
+'''range 문법 2'''
 # v1 = list(range(1,11))
 # print(v1)
 
-''''''
+'''range 문법 3'''
 # listb = ['a', 'b', 'c', 'd']
 # for b in listb:
 #     print(b)
@@ -14,7 +14,7 @@
 # for b in range(0, len(listb)):
 #     print(b)
 
-''''''
+'''range 문법 4'''
 # import random
 # lista = []
 # for a in range(0,6):
@@ -29,38 +29,49 @@
 #     print(a)
 
 '''for a in range를 써서 v1[index] 형태로 v1값 모두 출력'''
-# for b in range(len(v1)):
-#     print(v1[b])
+# v1 = list(range(10, 20))
+# for a in range(len(v1)):
+#     print(v1[a])
 
 '''for a in 리스트 구문으로는 원본 리스트 데이터 변경 불가'''
 # lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 # for a in lista:
 #     a = 100 #이런 방식으로는 원본 lista 값 변경 불가
 
-'''원본 바꾸기1'''
+'''원본 바꾸기 1 while'''
 # lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
-# lista[5] = 100
-# indexTemp = 0
-# while indexTemp<len(lista):
-#     lista[indexTemp] = 100
-#     indexTemp += 1
-'''원본 바꾸기1 정답'''
-# lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# lista[0] = 100 #있어도 상관 없음
 # indexTemp = 0
 # while indexTemp < len(lista):
 #     lista[indexTemp] = 100
 #     indexTemp += 1
 # print(lista)
+'''원본 바꾸기 1.5 특정 값만 바꾸기'''
+# lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# indexTemp = 0
+# while indexTemp < len(lista):
+#     if indexTemp == 2:
+#         lista[indexTemp] = 500
+#     indexTemp += 1
+# print(lista)
 
-'''원본바꾸기2'''
+'''원본바꾸기 2 for'''
 # lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 # lista[5] = 100
 # for a in lista:
 #     a = 100 #이런 방식으로는 원본 lista 값 변경 불가
 # print(lista)
 # #직접 리스트의 index로 접근해야 원본을 바꿀 수 있다    
+# lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 # for a in range(len(lista)):
 #     lista[a] = 100
+# print(lista)
+
+'''원본바꾸기 2.5 특정 값만 바꾸기'''
+# lista = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+# for a in range(len(lista)):
+#     if a == 9:
+#         lista[a] = lista[a]*10
 # print(lista)
 
 '''리스트 내포(comprehension)'''
@@ -80,14 +91,13 @@
 # lista = [a for a in range(10)]
 # print(lista)
 
-
-# *2 출력
+# 방법4에서 a*2 값 출력
 # lista = [a*2 for a in range(10)]
 # print(lista)
 
 #방법3에 홀수인 값에 2를 곱한 값만 list화
-lista = []
-for a in range(10):
-    if a % 2!= 0:
-        lista.append(a*2)
-print(lista)
+# lista = []
+# for a in range(10):
+#     if a % 2!= 0:
+#         lista.append(a*2)
+# print(lista)

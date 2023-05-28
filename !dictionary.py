@@ -32,6 +32,26 @@
 # days_in_month["4월"] = 30
 # print(days_in_month)
 
+'''comprehension 1'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# result = {"{}번".format(number+1): name for number, name in enumerate(students)}
+# print(result)
+'''comprehension 2'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# scores = [90, 85, 95, 80]
+# result = {student: score for student, score in zip(students, scores)}
+# print(result)
+'''comprehension 3'''
+# students = ["Alice", "Bob", "Charlie", "David"]
+# result = {students[i]: scores[i] for i in range(len(students))}
+# print(result)
+'''comprehension example'''
+# product_list = ["풀", "가위", "크래파스"]
+# price_list = [800, 2500, 5000]
+# product_dict = {product_list : price_list \
+#                 for product_list, price_list in zip(product_list , price_list)}
+# print(product_dict)
+
 '''수정/삭제'''
 # dic = {'one' : 1, 'two' : 2}
 # print(dic)
@@ -44,7 +64,8 @@
 # dic.pop('two')      # 값을 삭제합니다  {'three' : 3}
 # print(dic)
 
-'''keys/values 목록만 뽑아낼 때'''
+'''keys/values 목록만 출력'''
+# dic = {'one' : 1, 'two' : 2}
 # keyList = dic1.keys()
 # print(keyList)
 # valList = dic1.values()
@@ -54,33 +75,33 @@
 # for k in keyList:
 #     print(k)
 
-'''value 유도1'''
+'''value 유도 1'''
 # for v in dic1.values():
 #     print(v)
 
-'''value 유도2'''
+'''value 유도 2'''
 # valList = dic1.values()
 # print(valList)
 # for v in valList:
 #     print(v)
 
-'''key을 출력해주는 for문 안에서 value도 같이 출력1'''
+'''key을 출력해주는 for문 안에서 value도 같이 출력 1'''
 # for k,v in dic1.items():
 #     print("key 값 {}, value 값 {}".format(k,v))
 #     print(f"key 값 {k}, value 값 {v}")
 
-'''key을 출력해주는 for문 안에서 value도 같이 출력2'''
+'''key을 출력해주는 for문 안에서 value도 같이 출력 2'''
 # for k in keyList:
 #     print(k)
 #     print(dic1[k])
 
-'''for문을 사용해 key 값, value 값이 담긴 list 생성1'''
+'''for문을 사용해 key 값, value 값이 담긴 list 생성 1'''
 # key_value_list = []
 # for k in keyList:
 #     key_value_list.append((k, dic1[k]))
 # print(key_value_list)
 
-'''for문을 사용해 key 값, value 값이 담긴 list 생성2'''
+'''for문을 사용해 key 값, value 값이 담긴 list 생성 2'''
 # key_list = []
 # value_list = []
 # for k in keyList:
@@ -95,7 +116,7 @@
 # dic1.update(dic2)
 # print(dic1)
 
-'''리스트를 딕셔너리로 변환1'''
+'''리스트를 딕셔너리로 변환 1'''
 # lista = ['A', 'A', 'B', 'O', 'O', 'AB', 'AB']
 # dica = {}
 # for a in lista:
@@ -105,7 +126,7 @@
 #         dica[a] += 1
 # print(dica)
 
-'''리스트를 딕셔너리로 변환2'''
+'''리스트를 딕셔너리로 변환 2'''
 # lista = ['A', 'A', 'B', 'O', 'O', 'AB', 'AB']
 # dica = {}
 # for a in lista:
@@ -113,17 +134,16 @@
 #         dica[a] = lista.count(a)
 # print(dica)
 
-'''완주하지 못한 선수1'''
+'''완주하지 못한 선수 1'''
 # participant = ["mislav", "stanko", "mislav", "ana"]
 # completion = ["stanko", "ana", "mislav"]
-
 # for person in participant:
 #     if person in completion:
 #         completion.remove(person)
 #     else:
 #         print(person)
 
-'''완주하지 못한 선수2'''
+'''완주하지 못한 선수 2'''
 # participant = ["mislav", "stanko", "mislav", "ana"]
 # completion = ["stanko", "ana", "mislav"]
 # dictc = {}
