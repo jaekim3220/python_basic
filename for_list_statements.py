@@ -1,3 +1,4 @@
+# 유한반복 for 문
 '''range 문법 1'''
 # for a in range(1,101):
 #     print(a)
@@ -94,6 +95,9 @@
 # 방법4에서 a*2 값 출력
 # lista = [a*2 for a in range(10)]
 # print(lista)
+# 방법4에서 홀수*2 값 출력
+# lista = [a*2 for a in range(10) if a%2 != 0]
+# print(lista)
 
 #방법3에 홀수인 값에 2를 곱한 값만 list화
 # lista = []
@@ -101,3 +105,148 @@
 #     if a % 2!= 0:
 #         lista.append(a*2)
 # print(lista)
+
+'''한 반에 수학 점수가 60점이 넘으면 합격, 60점 미만이면 불합격
+lista = [90, 25, 67, 45, 80], list가 학생의 번호 순서대로 있을 때
+아래와 같이 출력'''
+'''1번 학생은 합격
+2번 학생은 불합격'''
+
+'''1'''
+# lista = [90, 25, 67, 45, 80]
+# num = 1
+# for a in lista:
+#     if a >= 60:
+#         print(f"{num}번 학생 합격")
+#     else:
+#         print("{}번 학생 불합격".format(num))
+#     num += 1
+'''2'''
+# lista = [90, 25, 67, 45, 80]
+# for a in range(len(lista)):
+#     if lista[a] >= 60:
+#         print(f"{a+1}번 학생 합격")
+#     else:
+#         print("{}번 학생 불합격".format(a+1))
+
+'''for-break문(for문에서 반드시 break문 써야하는 상황)'''
+'''혈액형이 a 형인 고객 선착순 1명만 찾는 상황'''
+'''출력 결과 : 4번째 고객이 이벤트에 당첨'''
+'''for-break문 1'''
+# lista = ['b', 'b', 'ab', 'a', 'b', 'a']
+# for a in range(len(lista)):
+#     if lista[a] == 'a':
+#         print(f"{a+1} 번째 고객이 이벤트에 당첨")
+#         break
+'''for-break문 2'''
+# answer = 0
+# lista = ['b', 'b', 'ab', 'a', 'b', 'a']
+# for a in range(len(lista)):
+#     if lista[a] == 'a':
+#         answer = a+1
+#         #break 유무 확인
+#         break
+# print(f"{a+1} 번째 고객이 이벤트에 당첨")
+
+'''for문을 이용한 구구단'''
+'''5단 출력
+5x1 = 5
+5x2 = 10
+5x3 = 15'''
+# dan = 5
+# for a in range(1,10):
+#     result = dan*a
+#     print(f"{dan}X{a} = {result}")
+
+'''while문을 이용한 구구단'''
+# dan = 5
+# a = 0
+# while a < 9:
+#     result = dan*(a+1)
+#     print(f"{dan}X{a+1} = {result}")
+#     a+=1
+
+'''입력한 숫자를 계산하는 구구단'''
+# while True:
+#     while True:
+#         dan = int(input("계산할 구구단 : "))
+#         for a in range(1,10):
+#             result = dan*a
+#             print(f"{dan}X{a} = {result}")
+#         break
+
+'''while 사용한 구구단 5단~9단까지 한꺼번에 출력'''
+# dan = 4
+# while dan < 9:
+#     dan += 1
+#     for a in range(1,10):
+#         print(f"{dan}X{a} = {dan*a}")
+
+'''lista[0], lista[1]의 자리를 바꾸기'''
+# lista = [10,20,30,40,50]
+# lista[0] = lista[1]
+# lista[1] = lista[0]
+# print(lista)
+# #위 방식의 문제점 인지
+# temp = lista[0]
+# lista[0] = lista[1]
+# lista[1] = temp
+# print(lista)
+
+'''for문을 이용한 정렬 알고리즘(sort 미사용)'''
+# lista = [93, 34, 62, 57, 9, 54]
+# # print(sorted(lista))
+# lista.sort()
+# print(lista)
+
+'''2중 for문'''
+
+'''1 선택 정렬 (0번째 index부터 가장 작은 값을 채워나가는 방식)'''
+#첫 번째 for : 바꾸고자하는 자리의 index or 반복 횟수
+#두 번째 for : 대상이 되는 수의 길이 or 각 반복마다 실행되는 작업의 횟수
+'''오름차순'''
+# lista = [93, 34, 62, 57, 9, 54, 87, 15, 84]
+# for a in range(len(lista)-1): #range로 index 값에 접근 (채워나가야 할 index)
+#     # 마지막 자릿수는 궂이 비교할 필요가 없음
+#     for b in range(a+1, len(lista)): # (비교의 대상이 되는 index)
+#         #반복 횟수를 1회 줄이기 위해 a+1, 안해도 값은 정확
+#         if lista[a] > lista[b]:
+            # temp = lista[a]
+            # lista[a] = lista[b]
+            # lista[b] = temp
+# print(lista)
+'''내림차순'''
+# lista = [93, 34, 62, 57, 9, 54, 87, 15, 84]
+# for a in range(len(lista)-1): #range로 index 값에 접근 (채워나가야 할 index)
+#     for b in range(a+1, len(lista)): # (비교의 대상이 되는 index)
+#         if lista[a] < lista[b]:
+#             temp = lista[a]
+#             lista[a] = lista[b]
+#             lista[b] = temp
+# print(lista)
+
+'''2 버블 정렬'''
+# lista = [93, 34, 62, 57, 9, 54, 87, 15, 84]
+# for a in range(len(lista)-1):
+#     for b in range(0, len(lista)-a-1): #indexover 방지로 -1
+#         if lista[b] > lista[b+1]:
+#             lista[b], lista[b+1] = lista[b+1], lista[b]
+
+# print(lista)
+
+'''행렬의 덧셈'''
+# lista = [[1,2,3],[2,3,4]]
+# listb = [[3,4,5],[5,6,7]]
+# print(len(lista))
+# print(len(lista[0]))
+#답 : [[lista[0][0]+listb[0][0], lista[0][1]+listb[0][1]],\
+# [lista[1][0]+listb[1][0], lista[1][1]+listb[1][1]]]
+
+# listsum = []
+# for a in range(len(lista)): 
+#     new = []
+#     for b in range(len(lista[a])):
+#         sum = lista[a][b] + listb[a][b]
+#         new.append(sum)
+#     listsum.append(new)
+# print(listsum)
