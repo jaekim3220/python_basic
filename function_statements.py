@@ -30,10 +30,10 @@
 # def myFunction(myinput1, myinput2):
 #     myresult = (myinput1 + myinput2)*2
 #     return myresult
-# # myinput1 = int(input("입력 값1 : "))
-# # myinput2 = int(input("입력 값2 : "))
-# # result = myFunction(myinput1, myinput2)
-# result = myFunction(100, 50)
+# myinput1 = int(input("입력 값1 : "))
+# myinput2 = int(input("입력 값2 : "))
+# result = myFunction(myinput1, myinput2)
+# # result = myFunction(100, 50)
 # print(int(result))
 
 '''list의 index 함수를 쓰지 않고 for 또는 while문을 통해
@@ -42,14 +42,14 @@
 # for a in range(len(lista)):
 #     if lista[a] == 9:
 #         print(f"index 번호는 : {a}")
-#         break
+#         break # break 생략 가능
 
 '''위의 for문을 활용해 myIndex라는 함수 생성
 input 값이 2개(list, 찾고자 하는 값), 
 print는 함수 내에서 하지 않고 return에 값을 담는다'''
 # lista = [1,4,6,9]
 # def myIndex(myinput1, myinput2):
-#     result = -1
+#     result = -1 #index는 거짓일 경우 -1임
 #     for a in range(len(myinput1)):
 #         if lista[a] == myinput2:
 #             result = a
@@ -61,7 +61,7 @@ print는 함수 내에서 하지 않고 return에 값을 담는다'''
 '''함수 내에서 print'''
 # lista = [1,4,6,9]
 # def myIndex(myinput1, myinput2):
-#     result = -1 #없으면 -1 출력
+#     result = -1 #index는 거짓이면 -1 출력
 #     for a in range(len(myinput1)):
 #         if lista[a] == myinput2:
 #             print(a)
