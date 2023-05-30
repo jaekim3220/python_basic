@@ -239,7 +239,7 @@ lista = [90, 25, 67, 45, 80], list가 학생의 번호 순서대로 있을 때
 # listb = [[3,4,5],[5,6,7]]
 # print(len(lista))
 # print(len(lista[0]))
-#답 : [[lista[0][0]+listb[0][0], lista[0][1]+listb[0][1]],\
+#힌트 : [[lista[0][0]+listb[0][0], lista[0][1]+listb[0][1]],\
 # [lista[1][0]+listb[1][0], lista[1][1]+listb[1][1]]]
 
 # listsum = []

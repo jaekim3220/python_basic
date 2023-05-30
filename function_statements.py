@@ -67,3 +67,4 @@ print는 함수 내에서 하지 않고 return에 값을 담는다'''
 #             print(a)
 #             break
 # myIndex(lista, 9)
+
