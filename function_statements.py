@@ -54,6 +54,7 @@ print는 함수 내에서 하지 않고 return에 값을 담는다'''
 #         if lista[a] == myinput2:
 #             result = a
 #             break
+#             # break 없이 바로 return 가능(return 시 함수 전체가 강제 종료)
 #     return result
 # r1 = myIndex(lista, 9)
 # print(r1)
@@ -65,6 +66,8 @@ print는 함수 내에서 하지 않고 return에 값을 담는다'''
 #     for a in range(len(myinput1)):
 #         if lista[a] == myinput2:
 #             print(a)
+#             # break 없이 바로 return 가능(return 시 함수 전체가 강제 종료)
 #             break
 # myIndex(lista, 9)
+
 
