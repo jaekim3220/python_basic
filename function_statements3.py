@@ -127,3 +127,32 @@
 #     for b in range(a+1, len(lista)):
 #         new_list.append([lista[a], lista[b]])
 # print(new_list)
+
+'''review 
+재귀함수 아님(다중 for문) lista의 3개씩의 조합을 구해 리스트에 담아 출력'''
+# lista = [10,20,30,40,50]
+# new_list = []
+# count = 0
+# for a in range(len(lista)):
+#     for b in range(a+1, len(lista)):
+#         # new_list.append([lista[a], lista[b]])
+#         for c in range(a+2, len(lista)):
+#             new_list.append([lista[a], lista[b], lista[c]])
+# print(new_list)
+
+'''재귀함수화
+lista의 3개씩의 조합을 구해 리스트에 담아 출력'''
+# def recur(lista, total_list, temp_list, n, m):
+#     if m == 0:
+#         total_list.append(temp_list[:]) #list의 count값을 물어볼 경우 이 부분을 count로
+#         return
+#     for a in range(len(lista)):
+#         temp_list.append(lista[a])
+#         recur(lista, total_list, temp_list, a+1, m-1)
+#         temp_list.pop()
+
+# input1 = [10,20,30,40,50]
+# total_list = []
+# input2 = 3
+# print(input1, total_list, [], input2)
+
