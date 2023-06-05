@@ -45,13 +45,15 @@
 낮은 데이터는 메모리에서 삭제
 파일 시스템은 그렇지 못하므로 수동으로 닫아야 메모리 낭비 방지'''
 
-import os #os 라이브러리 활용한 디렉터리 내부 파일 검색
-searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
+#os 라이브러리 활용한 디렉터리 내부 파일 검색
+# 모든 폴더까지 검색
 # 파일, 디렉토리 목록을 뽑아내는 listdir 함수 사용
+
+import os 
+searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
 dirList = os.listdir(searchDir)
 for dir in dirList:
-# 디렉토리 검사 로직
-    filename = os.path.join(searchDir, dir)
+    filename = os.path.join(searchDir, dir) #폴더 명 찾기
     if os.path.isdir(filename):
         dirList2 = os.listdir(filename)
         for dir2 in dirList2:
@@ -63,6 +65,43 @@ for dir in dirList:
     if(dirTuple[1]=='.py'):
         fullPath = os.path.join(searchDir, dir)
         print(fullPath)
- # 그 다음 폴더까지 검색
+'''재귀함수화
+예외처리 포함 안됨'''
+# import os 
+# def searchRecur(searchDir):
+#     # searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
+#     dirList = os.listdir(searchDir)
+#     if not dirList:
+#         return
+#     for dir in dirList:
+#         filename = os.path.join(searchDir, dir)
+#         if os.path.isdir(filename):
+#             searchRecur(filename)
+#         dirTuple = os.path.splitext(dir)
+#         if(dirTuple[1]=='.py'):
+#             fullPath = os.path.join(searchDir, dir)
+#             print(fullPath)
+# # searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
+# searchDir = r'C:' #C에서 뒤지기
+# searchRecur(searchDir)
 
- # 모든 폴더까지 검색
+'''강제종료 방지(try, exception)'''
+# import os 
+# def searchRecur(searchDir):
+#     try:
+#         # searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
+#         dirList = os.listdir(searchDir)
+#         if not dirList:
+#             return
+#         for dir in dirList:
+#             filename = os.path.join(searchDir, dir)
+#             if os.path.isdir(filename):
+#                 searchRecur(filename)
+#             dirTuple = os.path.splitext(dir)
+#             if(dirTuple[1]=='.py'):
+#                 fullPath = os.path.join(searchDir, dir)
+#     except Exception:
+#             print(fullPath)
+# searchDir = r'C:\Users\jehyu\Desktop\nationalsupport'
+# # searchDir = r'C:' #C에서 뒤지기
+# searchRecur(searchDir)
